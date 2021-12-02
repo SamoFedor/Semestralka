@@ -11,6 +11,7 @@
             <?php } ?>
             <form method = "post" action = "?c=Prihlasenie&a=login">
                 <div class = "mb-3">
+
                     <label for="exampleFormControlInput2" class ="form-label">Meno</label>
                     <input type = 'text' class = "form-control" name ="login" id = "exampleFormControlInput1" required>
                 </div>

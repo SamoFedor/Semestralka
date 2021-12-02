@@ -10,6 +10,7 @@
                     <label for = "formFile" class = "form-label">Meno</label>
                     <input class="form-control" name="meno" required>
                 </div>
+
                 <div class = "mb-3">
                     <label for = "formFile" class = "form-label">Priezvisko</label>
                     <input class="form-control" name="priezvisko" required>

@@ -24,6 +24,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="?c=players&a=player">Players</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="?c=home&a=post">Pridaj hraca</a>
                 </li>

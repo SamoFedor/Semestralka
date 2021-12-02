@@ -12,6 +12,7 @@
                         $trener->Priezvisko;
                         ?>
                         |
+
                         <?=
                         $trener->Team;
                         ?>

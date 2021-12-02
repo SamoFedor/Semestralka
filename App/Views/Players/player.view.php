@@ -54,6 +54,7 @@ if(sizeof($hrac) > 0) {
             <div class="col-sm-1 card-text haha">
                 AST <?=$hrac[0]->Asistencie?>
             </div>
+
             <div class=" col-sm-1 card-text haha">
                 Stl <?=$hrac[0]->Zisky?>
             </div>
