@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Config\Configuration;
 use App\Core\DB\Connection;
+use App\Models\Hrac;
 use App\Models\Teams;
 use App\Prihlasenie;
 
@@ -51,6 +52,15 @@ class HomeController extends AControllerRedirect
         } else{
             return $this->html();
         }
+
+        $priezvisko = $this->request()->getValue('priezvisko');
+        $jeTam = Hrac::getAll('priezvisko= ?',[$priezvisko]);
+        if(sizeof($jeTam) < 0 ) {
+                $this->redirect('home');
+            } else {
+                $this->redirect('Home','post',['error' => 'Hrac uz existuje']);
+            }
+
     }
 
 

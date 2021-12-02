@@ -6,7 +6,6 @@
         </form>
     </div>
 </div>
-
 <?php
 $hrac = $data['hrac'] ; //AK NEZADAM HRACA, TAK SA NIC NEZOBRAZI
 if(sizeof($hrac) > 0) {
