@@ -169,7 +169,7 @@ abstract class Model implements \JsonSerializable
      * Returns the connection to database
      * @return null
      */
-    public static function getConnection()
+    static public  function getConnection()
     {
         return self::$connection;
     }
@@ -182,4 +182,5 @@ abstract class Model implements \JsonSerializable
     {
         return get_object_vars($this);
     }
+
 }

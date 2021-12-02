@@ -1,0 +1,337 @@
+/*----------------Header------------------*/
+/*.header{
+    color:white;
+    background-color: black;
+    position:fixed;
+}*/
+.haha{
+    color: #bdc3c7;
+}
+.header{
+    background-color: black;
+    position:sticky;
+}
+.hhrac {
+    background-color: black;
+}
+
+.col-md-1 {
+    margin: 5px;
+    padding: 5px;
+}
+
+/*------------------------------------------*/
+/*----------------footer--------------------------*/
+.footer {
+
+    height: 500px;
+    width: 100%;
+}
+
+.loga {
+    border-radius: 25%;
+    width: 80%;
+    height: 50%;
+    margin: 5px;
+}
+
+/*------------------------------------------------*/
+/*--------------------Tabulka---------------------*/
+.data {
+    background-color: whitesmoke;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border-radius: 12px;
+}
+
+.data tr:nth-child(odd) td {
+    background-color: #ecf0f9;
+}
+
+.data tr:hover td {
+    background-color: #bdc3c7;
+}
+
+td {
+    padding: 1px;
+}
+
+.data tr > * {
+    padding: 2px;
+}
+
+/*------------------------------------------------*/
+/*-----LogoNBA-------*/
+.Logo {
+    width: 70px;
+    height: 30px;
+    margin-top: 2px;
+}
+
+/*-------------------*/
+/*-------------Texty---------------*/
+.headlines {
+    color: black;
+    font-weight: bold;
+}
+
+.Headlines {
+
+    border-radius: 12px;
+    background-color: #ecf0f9;
+    padding: 5px;
+}
+
+.Headlines:hover {
+    border-radius: 12%;
+}
+
+.headlines:hover {
+    color: blue;
+}
+
+/*--------------------------------*/
+.bunka {
+    border: 2px solid black;
+    border-radius: 4%;
+}
+
+.bunka:hover {
+    background-color: #bdc3c7;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.hraci {
+    margin-top: 5px;
+    width: 100%;
+    height: 80%;
+    border-radius: 12%;
+}
+
+.hraci:hover {
+    border-radius: 20%;
+    border: 2px solid blue;
+}
+
+.Nadpis_stat {
+    margin: 5px;
+    padding: 2px;
+}
+
+SELECT {
+    padding: 2px;
+    margin: 3px;
+}
+
+.selecty {
+    background-color: #ecf0f9;
+}
+
+.More_league_info {
+    margin: 5px;
+    border-radius: 12px;
+    background-color: #ecf0f9;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #bdc3c7;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+#business {
+    display:none;
+}
+
+/*<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </li>
+    */
+/*<div class = "container-fluid" style = "background-color: white">
+        <div class = "row">
+                <div class = "StatsMenu">
+                    <div class = "col-lg-1">
+                        <a href="S"
+                    </div>
+                </div>
+        </div>
+    </div>*/
+
+/*<div class = col-sm-6>
+                <iframe  src="https://www.mojevideo.sk/video/1d2d0/terrence_ross_vitaz_sutaze_nba_slam_dunk_2013.html">
+                </iframe>
+            </div>*/
+
+
+/*
+<section class="relative text-white lg:px-20 PlayerSummary_statsSectionBG__G3Epx">
+    <div class="flex flex-col mx-auto lg:flex-row max-w-screen-xxl">
+        <div class="flex justify-center py-3 lg:justify-between lg:py-0" style="min-width:40%">
+            <div class="PlayerSummary_verDivider__3j65k hidden lg:block">
+            </div><div class="PlayerSummary_playerStat__lQ86Y">
+            <p class="PlayerSummary_playerStatLabel__2f2Z8">PPG</p>
+            <p class="PlayerSummary_playerStatValue__3hvQY">13.6</p>
+        </div><div class="PlayerSummary_verDivider__3j65k"></div>
+            <div class="PlayerSummary_playerStat__lQ86Y">
+                <p class="PlayerSummary_playerStatLabel__2f2Z8">RPG</p>
+                <p class="PlayerSummary_playerStatValue__3hvQY">5.9</p>
+            </div><div class="PlayerSummary_verDivider__3j65k"></div>
+            <div class="PlayerSummary_playerStat__lQ86Y">
+                <p class="PlayerSummary_playerStatLabel__2f2Z8">APG</p>
+                <p class="PlayerSummary_playerStatValue__3hvQY">0.9</p>
+            </div>
+            <div class="PlayerSummary_verDivider__3j65k">
+            </div>
+            <div class="PlayerSummary_playerStat__lQ86Y">
+                <p class="PlayerSummary_playerStatLabel__2f2Z8">PIE</p>
+                <p class="PlayerSummary_playerStatValue__3hvQY">14.3</p></div>
+            <div class="PlayerSummary_verDivider__3j65k hidden lg:block"></div></div>
+        <div class="flex-col flex-grow hidden sm:flex">
+            <div class="PlayerSummary_horDivider__3nHXZ lg:hidden"></div>
+            <div class="flex"><div class="PlayerSummary_playerInfo__1L8sx">
+                <p class="PlayerSummary_playerInfoLabel__gBXXP">HEIGHT</p>
+                <p class="PlayerSummary_playerInfoValue__mSfou">6'11" (2.11m)</p>
+            </div>
+                <div class="PlayerSummary_verDivider__3j65k"></div>
+                <div class="PlayerSummary_playerInfo__1L8sx">
+                    <p class="PlayerSummary_playerInfoLabel__gBXXP">WEIGHT</p>
+                    <p class="PlayerSummary_playerInfoValue__mSfou">250lb (113kg)</p>
+                </div><div class="PlayerSummary_verDivider__3j65k"></div>
+                <div class="PlayerSummary_playerInfo__1L8sx">
+                    <p class="PlayerSummary_playerInfoLabel__gBXXP">COUNTRY</p>
+                    <p class="PlayerSummary_playerInfoValue__mSfou">USA</p></div>
+                <div class="PlayerSummary_verDivider__3j65k"></div>
+                <div class="PlayerSummary_playerInfo__1L8sx">
+                    <p class="PlayerSummary_playerInfoLabel__gBXXP">LAST ATTENDED</p>
+                    <p class="PlayerSummary_playerInfoValue__mSfou">Texas-Austin</p>
+                </div><div class="PlayerSummary_verDivider__3j65k"></div>
+            </div><div class="PlayerSummary_horDivider__3nHXZ"></div>
+            <div class="flex"><div class="PlayerSummary_playerInfo__1L8sx">
+                <p class="PlayerSummary_playerInfoLabel__gBXXP">AGE</p>
+                <p class="PlayerSummary_playerInfoValue__mSfou">36 years</p>
+            </div><div class="PlayerSummary_verDivider__3j65k"></div>
+                <div class="PlayerSummary_playerInfo__1L8sx">
+                    <p class="PlayerSummary_playerInfoLabel__gBXXP">BIRTHDATE</p>
+                    <p class="PlayerSummary_playerInfoValue__mSfou">July 19, 1985</p>
+                </div><div class="PlayerSummary_verDivider__3j65k"></div>
+                <div class="PlayerSummary_playerInfo__1L8sx">
+                    <p class="PlayerSummary_playerInfoLabel__gBXXP">DRAFT</p>
+                    <p class="PlayerSummary_playerInfoValue__mSfou">2006 R1 Pick 2</p>
+                </div><div class="PlayerSummary_verDivider__3j65k"></div><div class="PlayerSummary_playerInfo__1L8sx"><p class="PlayerSummary_playerInfoLabel__gBXXP">EXPERIENCE</p><p class="PlayerSummary_playerInfoValue__mSfou">15 Years</p></div><div class="PlayerSummary_verDivider__3j65k"></div></div></div><div class="flex flex-col flex-grow sm:hidden"><div class="PlayerSummary_horDivider__3nHXZ"></div><div class="flex py-2"><div class="flex flex-col w-1/2 py-3 text-center"><p class="PlayerSummary_playerStatLabel__2f2Z8">6'11" |   250lb | 36 years</p></div><div class="flex flex-col w-1/2 text-center"><button data-track="click" data-type="accordion" data-id="nba:players:player:profile:player-details:expand:accordion" data-text="Player Details" data-content="LaMarcus Aldridge" class="PlayerSummary_playerToggleButton__3I1kN" type="button">Player Details<svg role="presentation" dir="down" class="Icon_icon__2NnUo inline ml-2" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"><path fill="currentColor" d="M.5 6l6 5.5V.5z"></path></svg></button></div></div><div class="hidden"><div class="PlayerSummary_horDivider__3nHXZ"></div><div class="flex"><div class="PlayerSummary_playerInfo__1L8sx"><p class="PlayerSummary_playerInfoLabel__gBXXP">BIRTHDATE</p><p class="PlayerSummary_playerInfoValue__mSfou">July 19, 1985</p></div><div class="PlayerSummary_playerInfo__1L8sx"><p class="PlayerSummary_playerInfoLabel__gBXXP">COUNTRY</p><p class="PlayerSummary_playerInfoValue__mSfou">USA</p></div></div><div class="PlayerSummary_horDivider__3nHXZ"></div><div class="flex"><div class="PlayerSummary_playerInfo__1L8sx"><p class="PlayerSummary_playerInfoLabel__gBXXP">LAST ATTENDED</p><p class="PlayerSummary_playerInfoValue__mSfou">Texas-Austin</p></div><div class="PlayerSummary_playerInfo__1L8sx"><p class="PlayerSummary_playerInfoLabel__gBXXP">DRAFT</p><p class="PlayerSummary_playerInfoValue__mSfou">2006 R1 Pick 2</p></div></div><div class="PlayerSummary_horDivider__3nHXZ"></div><div class="flex-col py-3 text-center"><p class="PlayerSummary_playerInfoLabel__gBXXP">EXPERIENCE</p><p class="PlayerSummary_playerInfoValue__mSfou">15 Years</p></div><div class="PlayerSummary_horDivider__3nHXZ"></div><div class="flex-col py-3 text-center"><a data-track="click" data-type="button" data-id="nba:players:player:profile:compare-players:button" data-text="COMPARE PLAYERS" data-content="LaMarcus Aldridge" href="/stats/vs/#!/?PlayerID=200746" class="Anchor_complexLink__2NtkO"><button class="PlayerSummary_actionButton__3vWGw" type="button"><span class="t5">COMPARE PLAYERS</span></button></a></div></div></div></div></section>
+
+*/
+
+/*'?c=nazovControleraBezNazvuControler Home napr, & a=metoda-musiZodpovedatPrveSlovoPredVIEWPHP
+                hrac controler, views hrac, index.view.php ->kod ktory ma zobrazit' */
+
+
+/**/
+/*<button onclick="toggle('divID')"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+            <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg></button>
+        <div id="divID">
+            <img id="myImageId" src="https://logosmarcas.net/wp-content/uploads/2020/07/Brooklyn-Nets-Logo.png" width="30%" height="350px">
+        </div>
+        <script>
+        var element = document.getElementById('elementID');
+        if(element.style.display === "none"){
+        element.style.display = "block";
+        }else{
+        element.style.display = "none";
+        }
+        </script>
+        <script>
+            function toggle(ID){
+                var element = document.getElementById(ID);
+                if(element.style.display === "none"){
+                    element.style.display = "block";
+                }else{
+                    element.style.display = "none";
+                }
+            }
+        </script>*/
