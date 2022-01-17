@@ -1,3 +1,4 @@
+<?php /** @var Array $data */ ?>
 <div class = "container">
     <div class="search-container ">
         <form method="post" action="?c=Players&a=player">
@@ -7,7 +8,7 @@
     </div>
 </div>
 <?php
-$hrac = $data['hrac'] ; //AK NEZADAM HRACA, TAK SA NIC NEZOBRAZI
+$hrac = $data['hrac'] ;
 if(sizeof($hrac) > 0) {
 ?>
     <script>
@@ -42,12 +43,16 @@ if(sizeof($hrac) > 0) {
                     </div>
                     <div class=" col-sm-2 card-text">
                         <strong>Height</strong>
-                        <p><?=$hrac[0]->Height?></p>
+                        <p id ='vyska'></p>
                     </div>
                     <div class=" col-sm-2 card-text">
                         <strong>Weight</strong>
-                        <p><?=$hrac[0]->Weight?></p>
+                        <p id = 'vaha'></p>
                     </div>
+            <div class=" col-sm-2 card-text">
+                <strong>Weight in Kg</strong>
+                <p id = 'vahaKG'></p>
+            </div>
                     <div class = "col-md-2 card-text">
                         <strong>Position</strong>
                         <p><?=$hrac[0]->Pozicia?></p>
@@ -86,26 +91,32 @@ if(sizeof($hrac) > 0) {
             </div>
         </div>
     </div>
-    <div class = "container-fluid footer">
-        <div class = "row">
-            <div class = "col-12">
-                <hr>
-            </div>
-            <div class = "col-4">
-            </div>
-            <div class = "col-3">
-                <p>©2022 Samuel Fedor UNIZA</p>
-            </div>
-        </div>
-    </div>
+
     <?php
 }
-
 ?>
+<div class = "container-fluid footer">
+    <div class = "row">
+        <div class = "col-12">
+            <hr>
+        </div>
+        <div class = "col-4">
+        </div>
+        <div class = "col-3">
+            <p>©2022 Samuel Fedor UNIZA</p>
+        </div>
+    </div>
+</div>
 <script>
+    let x = 2.20462262;
+    let vaha =<?=$hrac[0]->Weight?>;
+    let kg = vaha/x;
     function zvacsi(x) {
         x.style.height = "80%";
         x.style.width = "100%";
     }
-    document.getElementById("vekHraca").innerHTML = <?=2022-$hrac[0]->Narodenie?>
+    document.getElementById("vaha").innerHTML =<?=$hrac[0]->Weight?>;
+    document.getElementById("vahaKG").innerHTML =Math.round(kg);
+    document.getElementById("vyska").innerHTML =<?=$hrac[0]->Height?>;
+    document.getElementById("vekHraca").innerHTML = <?=2022-$hrac[0]->Narodenie?>;
 </script>

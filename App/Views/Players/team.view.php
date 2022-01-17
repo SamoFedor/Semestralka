@@ -109,7 +109,7 @@ if(sizeof($team) > 0) {
         </div>
         <div class = "col-5">
         </div>
-        <div class = "col-2">
+        <div class = "col-3">
             <p>©2022 Samuel Fedor UNIZA</p>
         </div>
     </div>
