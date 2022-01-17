@@ -17,7 +17,6 @@ use App\Prihlasenie;
  */
 class HomeController extends AControllerRedirect
 {
-
     public function index()
     {
         $zapasy = Zapas::getAll();
@@ -65,8 +64,8 @@ class HomeController extends AControllerRedirect
     }
     public function insertTeam() {return $this->html();}
     public function insertTeamm() {
-        $logo = date('Y-a-d-H-i-s_') . $_FILES['files']['name']; //do nazvu prida aktualny datum a meno obrazka
-        $Team = $this->request()->getValue('team');    // request meno hraca z formulara
+        $logo = date('Y-a-d-H-i-s_') . $_FILES['files']['name'];
+        $Team = $this->request()->getValue('team');
         $Konferencia = $this->request()->getValue('konferencia');
         $jeTam = Teams::getAll('Team= ?',[$Team]);
         if(sizeof($jeTam) < 0 ) {
@@ -75,8 +74,8 @@ class HomeController extends AControllerRedirect
         $Divizia= $this->request()->getValue('divizia');
         $win= $this->request()->getValue('win');
         $lose= $this->request()->getValue('lose');
-        move_uploaded_file($_FILES['files']['tmp_name'],Configuration::UPLOAD_DIR . "$logo"); //premiestni subor od uzivatela na server
-        $prepare = Connection::connect()->prepare('INSERT into teams (Logo,Team,Konferencia,Divizia,Vitazstva,Prehry) values(?,?,?,?,?,?);'); // priprava SQL prikazu
+        move_uploaded_file($_FILES['files']['tmp_name'],Configuration::UPLOAD_DIR . "$logo");
+        $prepare = Connection::connect()->prepare('INSERT into teams (Logo,Team,Konferencia,Divizia,Vitazstva,Prehry) values(?,?,?,?,?,?);');
         $prepare->execute([$logo,$Team,$Konferencia,$Divizia,$win,$lose]);
         $this->redirect('Home');
     }
@@ -88,8 +87,8 @@ class HomeController extends AControllerRedirect
         }
         if(isset($_FILES['files'])){
             if($_FILES["files"]['error'] == UPLOAD_ERR_OK){
-                $name = date('Y-a-d-H-i-s_') . $_FILES['files']['name']; //do nazvu prida aktualny datum a meno obrazka
-                $menoHraca = $this->request()->getValue('meno');    // request meno hraca z formulara
+                $name = date('Y-a-d-H-i-s_') . $_FILES['files']['name'];
+                $menoHraca = $this->request()->getValue('meno');
                 $celeMeno = $this->request()->getValue('celeMeno');
                 $jeTam = Hrac::getAll('CeleMeno= ?',[$celeMeno]);
                 if(sizeof($jeTam) < 0 ) {
@@ -97,10 +96,10 @@ class HomeController extends AControllerRedirect
                 }
                 $priezvisko= $this->request()->getValue('priezvisko');
                 $MVP= $this->request()->getValue('MVPVote');
-                move_uploaded_file($_FILES['files']['tmp_name'],Configuration::UPLOAD_DIR . "$name"); //premiestni subor od uzivatela na server
-                $prepare = Connection::connect()->prepare('INSERT into hrac (Obrazok,CeleMeno,Meno,Priezvisko,MVPVote) values(?,?,?,?,?);'); // priprava SQL prikazu
-                $prepare->execute([$name,$celeMeno,$menoHraca,$priezvisko,$MVP]); //vykonanie SQL prikazu
-                $this->redirect('players','player', ['priezvisko' => $priezvisko]); //premiestnenie
+                move_uploaded_file($_FILES['files']['tmp_name'],Configuration::UPLOAD_DIR . "$name");
+                $prepare = Connection::connect()->prepare('INSERT into hrac (Obrazok,CeleMeno,Meno,Priezvisko,MVPVote) values(?,?,?,?,?);');
+                $prepare->execute([$name,$celeMeno,$menoHraca,$priezvisko,$MVP]);
+                $this->redirect('players','player', ['priezvisko' => $priezvisko]);
             }
         }
 
@@ -114,7 +113,7 @@ class HomeController extends AControllerRedirect
         $CeleMeno = $this->request()->getValue('celeMeno');
         $jeTam = Hrac::getAll('CeleMeno= ?',[$CeleMeno]);
         if(sizeof($jeTam) > 0 ) {
-            $prepare = Connection::connect()->prepare('Delete from hrac WHERE CeleMeno = ?;'); // priprava SQL prikazu
+            $prepare = Connection::connect()->prepare('Delete from hrac WHERE CeleMeno = ?;');
             $prepare->execute([$CeleMeno]); //vykonanie SQL prikazu
             $this->redirect('home');
         } else {

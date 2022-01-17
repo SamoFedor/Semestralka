@@ -17,7 +17,7 @@ if(sizeof($team) > 0) {
 <div class="card hhrac container">
     <div class ='row'>
     <div class="col-sm-3 bg-image hover-overlay  ripple" data-mdb-ripple-color="light" >
-        <img class ='logicko' src="<?= \App\Config\Configuration::UPLOAD_DIR.$team[0]->Logo ?>" alt = "Fotka"  width="100%" height="200px" />
+        <img class ='logicko' src="<?= \App\Config\Configuration::UPLOAD_DIR.$team[0]->Logo ?>" alt = "Fotka"  />
     </div>
         <div class ='col-sm-4 Nazov'>
             <h1 class="card-title haha"><strong><?=$team[0]->Team?></strong></h1>
@@ -47,8 +47,7 @@ if(sizeof($team) > 0) {
     <h2>Games played</h2>
 <?php if(sizeof($domaci) > 0) {
     ?>
-    <div class ="container">
-
+    <div class ="container card">
         <div class ="container">
             <div class="row">
                 <div class="col-sm-1 home">
@@ -75,7 +74,7 @@ if(sizeof($team) > 0) {
         ?>
         <?php if(sizeof($hostia) > 0) {
         ?>
-        <div class ="container">
+        <div class ="container ">
             <div class="row">
                 <div class="col-sm-1 home">
                     <p class ='stred'><strong>Away</strong></p>

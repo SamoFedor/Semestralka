@@ -21,9 +21,7 @@ class PrihlasenieController extends AControllerRedirect
     }
     public function loginform() {
         return $this->html(
-            [
-                'error' => $this->request()->getValue('error')
-            ]
+
         );
 
     }
@@ -57,8 +55,7 @@ class PrihlasenieController extends AControllerRedirect
         }
             $prepare = Connection::connect()->prepare('INSERT into login (Meno,Heslo) values(?,?);');
             $this->Heslo =password_hash($password,PASSWORD_DEFAULT);
-            password_verify($password,$this->Heslo);
-            $prepare->execute([$username,$password]); //vykonanie SQL prikazu
+            $prepare->execute([$username,$password]);
             Prihlasenie::login($username,$password);
             $this->redirect('home');
     }

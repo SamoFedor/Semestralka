@@ -18,7 +18,7 @@
                 <div class ="row">
                     <div class = col-sm-3 >
                         <div class = "Headlines">
-                            <h4 class ="Nadpisy" id ='Headlines'></h4>
+                            <p class ="Nadpisy" id ='Headlines'></p>
                             <hr>
                             <a href = "https://www.nba.com/news/zion-williamson-foot-to-be-reevaluated-in-2-weeks" class = "headlines">
                                 Durant out indefinitely with sprained MCL
@@ -44,7 +44,7 @@
                     </div>
                     <div class = "col-sm-6">
                         <div class = "News">
-                            <h4 class ="Nadpisy" id ='About'></h4>
+                            <p class ="Nadpisy" id ='About'></p>
                             <hr>
                             <p id ='textt'>The National Basketball Association (NBA) is a professional basketball league in North America. The league is composed of 30 teams (29 in the United States and 1 in Canada) and is one of the four major professional sports leagues in the United States and Canada. It is the premier men's professional basketball league in the world.[1]
                             <p id ='Curry'>Wardell Stephen Curry II (born March 14, 1988[1]) is an American professional basketball player for the Golden State Warriors of the National Basketball Association (NBA). Widely regarded as one of the greatest point guards of all time, and as the greatest shooter in NBA history,[2] Curry is credited with revolutionizing basketball by inspiring teams and players to routinely utilize the three-point shot.[3][4][5]
@@ -58,7 +58,7 @@
                     </div>
                     <div class = "col-sm-2">
                         <div class = "Headlines">
-                            <h5 class ="Nadpisy" id ='MLI'></h5>
+                            <p class ="Nadpisy" id ='MLI'></p>
                             <hr>
                             <a href = "https://gleague.nba.com/" class = "headlines" >
                                 NBA G LEAGUE

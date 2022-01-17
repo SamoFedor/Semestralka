@@ -10,7 +10,7 @@
             <option >Southwest</option>
             <option >Southeast</option>
         </select>
-            <button type="submit" onclick="fun()" >Submit</button>
+            <button type="submit" >Submit</button>
         </form>
         </div>
         <div class = "col-sm-2 ">
@@ -29,8 +29,8 @@
         <div class="row">
             <div class="col">
                 <?php foreach ($data['Divizia'] as $team){ ?>
-                    <img class="myImage" src="<?=\App\Config\Configuration::UPLOAD_DIR.$team->Logo
-                    ?>" width="170px" height="150px">
+                    <img alt= 'logo' class="myImage" src="<?=\App\Config\Configuration::UPLOAD_DIR.$team->Logo
+                    ?>">
                     <strong class ="Velkost"><?= $team->Team?></strong> <strong class ="Velkostt"><?=$team->Vitazstva?>:</strong><strong class ="Velkosttt"><?=$team->Prehry?></strong>
                     <hr>
                     <?php
@@ -43,8 +43,8 @@
     <div class="row">
         <div class="col Divizia">
             <?php foreach ($data['Conference'] as $team){ ?>
-                <img class="myImage" src="<?=\App\Config\Configuration::UPLOAD_DIR.$team->Logo
-                ?>" width="15%" height="5%">
+                <img class="myImage" alt ='logo' src="<?=\App\Config\Configuration::UPLOAD_DIR.$team->Logo
+                ?>">
                 <strong class ="Velkost"><?= $team->Team?></strong> <strong class ="Velkostt"><?=$team->Vitazstva?>:</strong><strong class ="Velkosttt"><?=$team->Prehry?></strong>
                 <hr>
                 <?php

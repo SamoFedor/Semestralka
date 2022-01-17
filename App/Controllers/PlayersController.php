@@ -19,7 +19,6 @@ class PlayersController extends AControllerRedirect
                 'hrac' => $hrac
 
             ]);
-
     }
 
     public function team()
@@ -36,7 +35,6 @@ class PlayersController extends AControllerRedirect
                 'coach' => $coach,
                 'zapasDomaci' =>$zapasDomaci,
                 'zapasHostia'=>$zapasHostia
-
             ]
         );
 
@@ -51,8 +49,6 @@ class PlayersController extends AControllerRedirect
                     'hrac' => $hrac
                 ]
             );
-
-
     }
     public function addMVPVote(){
         $idPlayer = $this->request()->getValue('id');

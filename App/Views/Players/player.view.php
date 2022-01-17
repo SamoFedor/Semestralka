@@ -53,7 +53,7 @@ if(sizeof($hrac) > 0) {
                 <strong>Weight in Kg</strong>
                 <p id = 'vahaKG'></p>
             </div>
-                    <div class = "col-md-2 card-text">
+                    <div class = "col-sm-3 card-text">
                         <strong>Position</strong>
                         <p><?=$hrac[0]->Pozicia?></p>
                         </div>
@@ -61,27 +61,27 @@ if(sizeof($hrac) > 0) {
             <div class = "container col-sm-6">
                 <div class="card-body">
                     <div class ="row">
-                        <div class=" col-sm-6 card-text haha">
+                        <div class=" col-sm-6 card-text ">
                             <strong>Points</strong>
                             <p><?=$hrac[0]->Body?></p>
                         </div>
-                        <div class="col-sm-6 card-text haha">
+                        <div class="col-sm-6 card-text ">
                             <strong>Rebounds</strong>
                             <p><?=$hrac[0]->Doskoky?></p>
                         </div>
-                        <div class="col-sm-6 card-text haha">
+                        <div class="col-sm-6 card-text ">
                             <strong>Assists</strong>
                             <p><?=$hrac[0]->Asistencie?></p>
                         </div>
-                        <div class=" col-sm-6 card-text haha">
+                        <div class=" col-sm-6 card-text ">
                             <strong>Steals</strong>
                             <p><?=$hrac[0]->Zisky?></p>
                         </div>
-                        <div class=" col-sm-6 card-text haha">
+                        <div class=" col-sm-6 card-text ">
                             <strong>Blocks</strong>
                             <p><?=$hrac[0]->Bloky?></p>
                         </div>
-                        <div class=" col-sm-6 card-text haha">
+                        <div class=" col-sm-6 card-text ">
                             <strong>Turnovers</strong>
                             <p><?=$hrac[0]->Straty?></p>
                         </div>
@@ -111,6 +111,11 @@ if(sizeof($hrac) > 0) {
     let x = 2.20462262;
     let vaha =<?=$hrac[0]->Weight?>;
     let kg = vaha/x;
+
+    let y =2022;
+    let hrac = <?=$hrac[0]->Narodenie?>;
+    let vek = y-hrac;
+
     function zvacsi(x) {
         x.style.height = "80%";
         x.style.width = "100%";
@@ -118,5 +123,7 @@ if(sizeof($hrac) > 0) {
     document.getElementById("vaha").innerHTML =<?=$hrac[0]->Weight?>;
     document.getElementById("vahaKG").innerHTML =Math.round(kg);
     document.getElementById("vyska").innerHTML =<?=$hrac[0]->Height?>;
-    document.getElementById("vekHraca").innerHTML = <?=2022-$hrac[0]->Narodenie?>;
+    document.getElementById("vekHraca").innerHTML = vek;
+
+
 </script>
