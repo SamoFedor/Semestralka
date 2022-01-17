@@ -15,6 +15,7 @@ class Configuration
     public const DB_PASS = 'dtb456';
 
     public const LOGIN_URL = '?c=Prihlasenie&a=loginform';
+    public const REG_URL =   '?c=Prihlasenie&a=register';
 
     public const ROOT_LAYOUT = 'root.layout.view.php';
 
