@@ -26,7 +26,7 @@ class PlayersController extends AControllerRedirect
     {
 
         $Team = $this->request()->getValue('Team');
-        $team = Teams::getAll('Team = ?',[$Team]); //select s podmienkou WHERE
+        $team = Teams::getAll('Team = ?',[$Team]);
         $coach = Trener::getAll('Team = ?',[$Team]);
         $zapasDomaci =Zapas::getAll('Domaci =?',[$Team]);
         $zapasHostia =Zapas::getAll('Hostia =?',[$Team]);
@@ -44,7 +44,7 @@ class PlayersController extends AControllerRedirect
     public function player()
     {
         $priezvisko = $this->request()->getValue('priezvisko');
-        $hrac = Hrac::getAll('Priezvisko = ?',[$priezvisko]); //select s podmienkou WHERE
+        $hrac = Hrac::getAll('Priezvisko = ?',[$priezvisko]);
 
             return $this->html(
                 [
