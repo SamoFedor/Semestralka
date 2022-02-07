@@ -41,7 +41,7 @@ if(sizeof($team) > 0) {
                 <?='     '.$team[0]->Wins?> : <?=$team[0]->Loses?>
             </div>
             <div>
-                <strong>Winning percentage: </strong><p id =result></p>
+                <p id =result></p>
             </div>
         <?php if(sizeof($coach) > 0) { ?>
             <div>
