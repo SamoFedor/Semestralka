@@ -5,9 +5,6 @@ namespace App\Controllers;
 use App\Config\Configuration;
 use App\Core\DB\Connection;
 use App\Models\player;
-use App\Models\teams;
-use App\Models\coaches;
-use App\Models\matches;
 use App\Prihlasenie;
 
 
@@ -66,14 +63,14 @@ class PlayersController extends AControllerRedirect
         return $this->html(['player' => $player]);
     }
 
-    public function addMVPVote(){
+   /* public function addMVPVote(){
         $idPlayer = $this->request()->getValue('id');
         if ($idPlayer > 0){
             $Player = player::getOne($idPlayer);
             $Player->addMVPVote();
         }
         $this->redirect('Players','player',['id' => $idPlayer]);
-    }
+    }*/
 
     public function upload()
     {

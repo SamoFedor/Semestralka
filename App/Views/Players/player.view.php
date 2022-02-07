@@ -26,12 +26,6 @@ if(sizeof($hrac) > 0) {
            <div class ="col-sm-3">
                 <img src="<?=\App\Config\Configuration::UPLOAD_DIR.$hrac[0]->Logo?>" alt = "Fotka" class = "card-logo"/>
             </div>
-            <div class = "col-sm-2 MVP">
-                <form method="post" action="?c=Players&a=addMVPVote">
-                    <input type="text" placeholder="Number <?= $hrac[0]->id ?>" name="id" required>
-                    <button type="submit" onclick="alert('Pridali ste MVP vote')">MVP Votes <?=$hrac[0]->MVP_Vote?></button>
-                </form>
-            </div>
         </div>
     </div>
     <div class = "container hlavicka">

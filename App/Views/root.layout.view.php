@@ -39,6 +39,9 @@
                             <li><a href="?c=team&a=deleteTeam">DELETE</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?c=Coach&a=updatee"">Update coach</a>
+                    </li>
                 <?php if (\App\Prihlasenie::isLogged()) {?>
                         <li>
                             <a href="?c=Prihlasenie&a=zmenaHesla">Change password </a>
