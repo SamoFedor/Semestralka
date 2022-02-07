@@ -362,3 +362,38 @@ span.psw {
         width: 100%;
     }
 }
+
+
+
+/*<div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Points</label>
+                    <input class="form-control" placeholder="0" name="points" required minlength="1" maxlength="4">
+                </div>
+                <div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Rebounds</label>
+                    <input class="form-control" placeholder="0" name="rebounds" required minlength="1" maxlength="4">
+                </div>
+                <div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Assists</label>
+                    <input class="form-control" placeholder="0" name="assists" required minlength="1" maxlength="4">
+                </div>
+                <div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Steals</label>
+                    <input class="form-control" placeholder="0" name="steals" required minlength="1" maxlength="4">
+                </div>
+                <div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Blocks</label>
+                    <input class="form-control" placeholder="0" name="blocks" required minlength="1" maxlength="4">
+                </div>
+                <div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Position</label>
+                    <input class="form-control" placeholder="0" name="position" required minlength="1" maxlength="4">
+                </div>
+                <div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Height</label>
+                    <input class="form-control" placeholder="0" name="height" required minlength="1" maxlength="4">
+                </div>
+                <div class = "mb-3">
+                    <label for = "formFile" class = "form-label">Weight</label>
+                    <input class="form-control" placeholder="0" name="weight" required minlength="1" maxlength="4">
+                </div>*/

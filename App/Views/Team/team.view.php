@@ -68,19 +68,18 @@ if(sizeof($team) > 0) {
         <?php foreach ($data['Players'] as $hraci){ ?>
         <table>
             <tr>
+                <td>
                 <img class ='fotka' src="<?= \App\Config\Configuration::UPLOAD_DIR.$hraci->Picture ?>" alt = "Fotka"  />
+                </td>
             </tr>
             <tr>
-                <td><a class ="tea" href="?c=players&a=player&surname=<?= $hraci->Surname ?>"><?= $hraci->Name .' '. $hraci->Surname ?></td>
+                <td><a class ="tea" href="?c=players&a=player&surname=<?= $hraci->Surname ?>"><?= $hraci->Name .' '. $hraci->Surname ?></a></td>
             </tr>
             <tr>
                 <td><?=$hraci->Salary.' '?>Millions</td>
             </tr>
             <tr>
                 <td><?=$hraci->Position?></td>
-            </tr>
-            <tr>
-                <td id="vekHraca"></td>
             </tr>
         </table>
         <?php } ?>
@@ -170,26 +169,6 @@ if(sizeof($team) > 0) {
     document.getElementById("vekHraca").innerHTML = vek;
 
     document.getElementById("result").innerHTML =result;
-    var cislo = 0;
-    var match =0;
-    function funRoster() {
 
-        if(cislo == 0) {
-        document.getElementById('Hraci').style.display ='block';
-        cislo++;
-        } else {
-            document.getElementById('Hraci').style.display ='none';
-            cislo--;
-        }
-    }
-    function funMatches() {
-        if(match == 0) {
-        document.getElementById('games').style.display ='block';
-        match++;
-        } else {
-            document.getElementById('games').style.display ='none';
-            match--;
-        }
-    }
 
 </script>

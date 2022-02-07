@@ -7,12 +7,12 @@
                     <input class="form-control" name="team" required minlength="2" maxlength="30">
                 </div>
                 <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Vitazstva</label>
-                    <input class="form-control" name="vyhry" required minlength="1" maxlength="20">
+                    <label for = "formFile" class = "form-label">Wins</label>
+                    <input class="form-control" name="wins" required minlength="1" maxlength="20">
                 </div>
                 <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Prehry</label>
-                    <input class="form-control" name="prehry" required minlength="1" maxlength="20">
+                    <label for = "formFile" class = "form-label">Loses</label>
+                    <input class="form-control" name="loses" required minlength="1" maxlength="20">
                 </div>
                 <div class = "mb-3">
                     <button type = "submit" class="btn btn-primary">Odoslat</button>

@@ -3,10 +3,12 @@
 namespace App\Controllers;
 
 use App\Core\DB\Connection;
+use App\Models\login;
 use App\Models\player;
 use App\Models\teams;
 use App\Models\coaches;
 use App\Models\matches;
+use App\Prihlasenie;
 
 
 class TeamController extends AControllerRedirect
@@ -64,15 +66,23 @@ class TeamController extends AControllerRedirect
         return $this->json($team);
 
     }
-
-   /* public function getAllTeamsDivision() {
-        $pr = Connection::connect()->prepare('SELECT * FROM teams where Division = ? ORDER BY Wins ');
-        $division = $this->request()->getValue('division');
+    public function getAllTeamsConference() {
+        $pr = Connection::connect()->prepare('SELECT * FROM teams where Conference = ? ORDER BY Wins DESC ');
+        $division = $this->request()->getValue('Conference');
         $pr->execute([$division]);
         $team = $pr->fetchAll();
 
         return $this->json($team);
-    }*/
+    }
+
+    public function getAllTeamsDivision() {
+        $pr = Connection::connect()->prepare('SELECT * FROM teams where Division = ? ORDER BY Wins DESC');
+        $division = $this->request()->getValue('Division');
+        $pr->execute([$division]);
+        $team = $pr->fetchAll();
+
+        return $this->json($team);
+    }
     public function deleteTeam() {return $this->html();}
     public function deleteTeamm() {
         $Team = $this->request()->getValue('team');
@@ -105,13 +115,13 @@ class TeamController extends AControllerRedirect
     }
     public function updatee() {
         $team = $this->request()->getValue('team');
-        $win = $this->request()->getValue('vyhry');
-        $lose = $this->request()->getValue('prehry');
+        $win = $this->request()->getValue('wins');
+        $lose = $this->request()->getValue('loses');
         $jeTam = Teams::getAll('Team= ?',[$team]);
         if(sizeof($jeTam) < 0 ) {
             $this->redirect('home');
         }
-        $prepare = Connection::connect()->prepare('UPDATE teams SET Vitazstva = ?,Prehry = ? WHERE Team = ?;');
+        $prepare = Connection::connect()->prepare('UPDATE teams SET Wins = ?,Loses = ? WHERE Team = ?;');
         $prepare->execute([$win,$lose,$team]);
         $this->redirect('home','update');
     }

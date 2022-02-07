@@ -20,7 +20,4 @@ class teams extends \App\Core\Model
     {
         return 'teams';
     }
-    public function getTeam() {
-        return $this->Team;
-    }
 }

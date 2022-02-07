@@ -7,7 +7,7 @@
                     <input name="files" class = "form-control" id="formFile" type="file" required>
                 </div>
                 <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Username</label>
+                    <label for = "formFile" class = "form-label">Name</label>
                     <input class="form-control" name="meno" required minlength="2" maxlength="20">
                 </div>
                 <div class = "mb-3">
@@ -17,22 +17,6 @@
                 <div class = "mb-3">
                     <label for = "formFile" class = "form-label">Team</label>
                     <input class="form-control" placeholder="team" name="team" required minlength="10" maxlength="30">
-                </div>
-                <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Points</label>
-                    <input class="form-control" placeholder="0" name="points" required minlength="1" maxlength="4">
-                </div>
-                <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Rebounds</label>
-                    <input class="form-control" placeholder="0" name="rebounds" required minlength="1" maxlength="4">
-                </div>
-                <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Assists</label>
-                    <input class="form-control" placeholder="0" name="assists" required minlength="1" maxlength="4">
-                </div>
-                <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">MVP Votes</label>
-                    <input class="form-control" placeholder="0" name="MVPVote" required minlength="1" maxlength="4">
                 </div>
                 <div class = "mb-3">
                     <button type = "submit" class="btn btn-primary">Odoslat</button>

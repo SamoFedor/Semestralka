@@ -1,9 +1,7 @@
 <div class ="container Options">
+                <button id="btn-all">All teams</button>
 
-    <button id="btn-all">All teams</button>
-
-            <form method="post" action="?c=Team&a=leaderboard">
-                <select name ="division"  >
+                <select name ="division" id ="drop-div" >
                     <option >Pacific</option>
                     <option >Central</option>
                     <option >Atlantic</option>
@@ -12,19 +10,14 @@
                     <option >Southeast</option>
                     <option selected hidden>Division</option>
                 </select>
-                <button type="submit" >Division</button>
-            </form>
+                <button type="submit" id="division" >Division</button>
 
-
-            <form method="post" action="?c=Team&a=leaderboard">
-                <select name ="conference">
+                <select name ="conference" id ="drop-divc">
                     <option >East</option>
                     <option >West</option>
                     <option selected hidden>Conference</option>
                 </select>
-                <button type="submit">Conference</button>
-            </form>
-
+                <button type="submit" id="conference" onclick="getAllTeamsConference()">Conference</button>
 </div>
 <?php /** @var Array $data */ ?>
 <?php $hrac = $data['Division'];
@@ -64,7 +57,12 @@ if(sizeof($hrac) > 0) {
     </div>
 </div>
 <?php } ?>
-<div id="team">
+<div class = "row">
+
+    <div id="team">
+
+    </div>
+
 </div>
 <div class = "container-fluid footer">
     <div class = "row">

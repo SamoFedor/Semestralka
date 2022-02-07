@@ -21,7 +21,7 @@ if(sizeof($hrac) > 0) {
             </div>
             <div class = "col-sm-4 card-meno">
                 <h5><strong><?=$hrac[0]->Name. " ". $hrac[0]->Surname ?></strong></h5>
-                <h5><?=$hrac[0]->Team ?></h5>
+                <a class ="tea" href="?c=team&a=team&Team=<?=$hrac[0]->Team ?>"><h5><?=$hrac[0]->Team ?></h5></a>
             </div>
            <div class ="col-sm-3">
                 <img src="<?=\App\Config\Configuration::UPLOAD_DIR.$hrac[0]->Logo?>" alt = "Fotka" class = "card-logo"/>

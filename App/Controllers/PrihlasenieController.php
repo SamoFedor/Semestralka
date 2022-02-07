@@ -27,12 +27,14 @@ class PrihlasenieController extends AControllerRedirect
     }
     public function login() {
 
-        $login = $this->request()->getValue('login');
-        $password = $this->request()->getValue('password');
-        $hash =password_hash($password,PASSWORD_DEFAULT);
+        $login = $this->request()->getValue('login_name');
+        $password = $this->request()->getValue('login_password');
+        $heslo =  login::getAll('Username=?',[$login]);
+        $heslo = $heslo[0]->getPassword();
+
         $uzivatel = login::getAll('Username = ?', [$login]);
         if(sizeof($uzivatel) > 0 ) {
-            if (password_verify($password,$hash)) {
+            if (password_verify($password,$heslo)) {
                 Prihlasenie::login($login,$password);
                 $this->redirect('home');
             } else {
@@ -42,6 +44,28 @@ class PrihlasenieController extends AControllerRedirect
             $this->redirect('Prihlasenie','loginform',['error' => 'Zle zadane meno alebo heslo']);
         }
 
+    }
+    public function zmenaHeslaa() {
+        $povodne =$this->request()->getValue('povodnePassword');
+        $noveHeslo =$this->request()->getValue('Password');
+        $noveRepeat =$this->request()->getValue('repeatPassword');
+        $username = Prihlasenie::getName();
+        if($username=="") {
+            return $this->json('Nemate povolenie');
+        }
+        $heslo =  $_SESSION['Heslo'];
+
+        if($povodne != $heslo){
+            return $this->json('Heslo sa nezhoduje');
+        }
+        if($noveRepeat != $noveHeslo){
+            return $this->json('Nove hesla sa musia rovnat');
+        }
+        $_SESSION['Heslo'] = $noveHeslo;
+        $noveHeslo = password_hash($noveHeslo,PASSWORD_DEFAULT);
+        $prepare = Connection::connect()->prepare('UPDATE login SET Password = ? WHERE Username = ?;');
+        $prepare->execute([$noveHeslo,$username]);
+        return  $this->json('Heslo je zmenené');
     }
     public function logout() {
         Prihlasenie::logout();
@@ -70,19 +94,5 @@ class PrihlasenieController extends AControllerRedirect
     public function zmenaHesla() {
         return $this->html();
     }
-    public function zmenaHeslaa() {
-       $heslo =$this->request()->getValue('heslo');
-        $uzivatel = login::getAll('Password = ?', [$heslo]);
-        if(sizeof($uzivatel) > 0) {
-                $new = $this->request()->getValue('new');
-                $repeat = $this->request()->getValue('repeat');
-                if($new == $repeat) {
-                    $prepare = Connection::connect()->prepare('UPDATE login SET Password = ? WHERE Password = ?;');
-                    $prepare->execute([$new,$heslo]);
-                    $this->redirect('home');
-                }
 
-        }
-
-    }
 }

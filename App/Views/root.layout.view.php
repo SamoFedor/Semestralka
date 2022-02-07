@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css.css">
     <script src="public/ajax.js"></script>
+    <script src="public/leaderboard.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">

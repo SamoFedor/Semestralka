@@ -91,41 +91,6 @@
                     </div>
                 </div>
             </div>
-                <script>
-                    document.getElementById("MLI").innerHTML = "More league info";
-                    document.getElementById("About").innerHTML ="About Player You clicked on";
-                    document.getElementById("Headlines").innerHTML ="Headlines";
 
-
-                    function funCurry() {
-                        document.getElementById("textt").style.display = "none";
-                        document.getElementById("Lebron").style.display = "none";
-                        document.getElementById("Harden").style.display = "none";
-                        document.getElementById("Giannis").style.display = "none";
-                        document.getElementById("Curry").style.display = "block";
-                    }
-                    function funLebron() {
-                        document.getElementById("textt").style.display = "none";
-                        document.getElementById("Curry").style.display = "none";
-                        document.getElementById("Harden").style.display = "none";
-                        document.getElementById("Giannis").style.display = "none";
-                        document.getElementById("Lebron").style.display = "block";
-                    }
-                    function funHarden() {
-                        document.getElementById("textt").style.display = "none";
-                        document.getElementById("Curry").style.display = "none";
-                        document.getElementById("Lebron").style.display = "none";
-                        document.getElementById("Giannis").style.display = "none";
-                        document.getElementById("Harden").style.display = "block";
-                    }
-                    function funGiannis() {
-                        document.getElementById("textt").style.display = "none";
-                        document.getElementById("Curry").style.display = "none";
-                        document.getElementById("Harden").style.display = "none";
-                        document.getElementById("Lebron").style.display = "none";
-                        document.getElementById("Giannis").style.display = "block";
-                    }
-
-                </script>
 
 
