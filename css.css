@@ -1,3 +1,75 @@
+ul{
+    padding: 0;
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+
+}
+ul li a{
+    display: block;
+    padding: 8px 25px;
+    color: gray;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: black;
+    background: #939393;
+}
+ul li ul.dropdown{
+    min-width: 100%; /* Set width of the dropdown */
+    background: #f2f2f2;
+    color: black;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+ul li:hover ul.dropdown{
+    display: block;	/* Display the dropdown */
+}
+ul li ul.dropdown li{
+    display: block;
+}
+.tea {
+    color:black;
+}
+.card {
+
+    padding: 5px;
+    margin: 5px 5px 5px 5px ;
+
+}
+.ajax {
+
+}
+.fotka {
+    width: 12%;
+    height: 12%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.title {
+    font-weight: bold;
+    padding: 5px;
+
+}
 /*----------------Header------------------*/
 
 
@@ -7,8 +79,8 @@
     border-radius: 20px;
 }
 .logicko {
-    border-radius: 100px;
-    width:100%;
+    border-radius: 300px;
+    width:80%;
     height:200px;
 }
 .Nazov {
@@ -138,7 +210,15 @@ body {
     width:170px;
     height:150px;
 }
-
+.allImage {
+    max-width: 10%;
+    max-height: 10%;
+}
+.Teams {
+    color: #ecf0f9;
+    background-color: black;
+    border-radius: 3%;
+}
 
 a {
     text-decoration: none;

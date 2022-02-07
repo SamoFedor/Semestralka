@@ -11,6 +11,9 @@
         </div>
 
         <div class="container">
+            <label for="uname"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name='email' required>
+
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name='username' required>
 
@@ -21,7 +24,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="document.getElementById('id02').style.display='none' " class="cancelbtn">Cancel</button>
         </div>
     </form>
 </div>

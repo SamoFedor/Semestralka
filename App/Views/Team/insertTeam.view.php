@@ -1,29 +1,25 @@
 <div class = "row">
     <div class = "col">
-        <form method ="post" enctype="multipart/form-data" action ="?c=home&a=insertTeamm">
+        <form method ="post" enctype="multipart/form-data" action ="?c=Team&a=insertTeamm">
             <div>
-                <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Logo</label>
-                    <input name="files" class = "form-control" id="formFile" type="file" required>
-                </div>
                 <div class = "mb-3">
                     <label for = "formFile" class = "form-label">Team</label>
                     <input class="form-control" name="team" required minlength="10" maxlength="50">
                 </div>
                 <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Konferencia</label>
-                    <input class="form-control" name="konferencia" required minlength="4" maxlength="4">
+                    <label for = "formFile" class = "form-label">Town</label>
+                    <input class="form-control" name="Town" required minlength="1" maxlength="50">
                 </div>
                 <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Divizia</label>
-                    <input class="form-control" name="divizia" required minlength="2" maxlength="20">
+                    <label for = "formFile" class = "form-label">Postfix</label>
+                    <input class="form-control" name="Postfix" required minlength="1" maxlength="50">
                 </div>
                 <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Vitazstva</label>
+                    <label for = "formFile" class = "form-label">Wins</label>
                     <input class="form-control" name="win" required minlength="1" maxlength="4">
                 </div>
                 <div class = "mb-3">
-                    <label for = "formFile" class = "form-label">Prehry</label>
+                    <label for = "formFile" class = "form-label">Loses</label>
                     <input class="form-control" name="lose" required minlength="1" maxlength="4">
                 </div>
                 <div class = "mb-3">

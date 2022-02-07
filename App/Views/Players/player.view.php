@@ -2,34 +2,34 @@
 <div class = "container">
     <div class="search-container ">
         <form method="post" action="?c=Players&a=player">
-        <input type="text" placeholder="Search.." name="priezvisko" required>
+        <input type="text" placeholder="Type surname.." name="surname" required>
         <button type="submit">Submit</button>
         </form>
     </div>
 </div>
 <?php
-$hrac = $data['hrac'] ;
+$hrac = $data['player'] ;
 if(sizeof($hrac) > 0) {
 ?>
     <script>
-        alert('<?=$hrac[0]->Meno. " ". $hrac[0]->Priezvisko ?>');
+        alert('<?=$hrac[0]->Name. " ". $hrac[0]->Surname ?>');
     </script>
     <div class ="container hlavicka">
         <div class = "row">
             <div class ="col-sm-3">
-                <img onmouseover="zvacsi(this)" src="<?=\App\Config\Configuration::UPLOAD_DIR.$hrac[0]->Obrazok?>" alt = "Fotka" class = "card-foto"/>
+                <img onmouseover="zvacsi(this)"  src="<?=\App\Config\Configuration::UPLOAD_DIR.$hrac[0]->Picture?>" alt = "Fotka" class = "card-foto"/>
             </div>
             <div class = "col-sm-4 card-meno">
-                <h5><strong><?=$hrac[0]->Meno. " ". $hrac[0]->Priezvisko ?></strong></h5>
+                <h5><strong><?=$hrac[0]->Name. " ". $hrac[0]->Surname ?></strong></h5>
                 <h5><?=$hrac[0]->Team ?></h5>
             </div>
-            <div class ="col-sm-3">
+           <div class ="col-sm-3">
                 <img src="<?=\App\Config\Configuration::UPLOAD_DIR.$hrac[0]->Logo?>" alt = "Fotka" class = "card-logo"/>
             </div>
             <div class = "col-sm-2 MVP">
                 <form method="post" action="?c=Players&a=addMVPVote">
                     <input type="text" placeholder="Number <?= $hrac[0]->id ?>" name="id" required>
-                    <button type="submit" onclick="alert('Pridali ste MVP vote')">MVP Votes <?=$hrac[0]->MVPVote?></button>
+                    <button type="submit" onclick="alert('Pridali ste MVP vote')">MVP Votes <?=$hrac[0]->MVP_Vote?></button>
                 </form>
             </div>
         </div>
@@ -55,7 +55,7 @@ if(sizeof($hrac) > 0) {
             </div>
                     <div class = "col-sm-3 card-text">
                         <strong>Position</strong>
-                        <p><?=$hrac[0]->Pozicia?></p>
+                        <p><?=$hrac[0]->Position?></p>
                         </div>
             </div>
             <div class = "container col-sm-6">
@@ -63,29 +63,24 @@ if(sizeof($hrac) > 0) {
                     <div class ="row">
                         <div class=" col-sm-6 card-text ">
                             <strong>Points</strong>
-                            <p><?=$hrac[0]->Body?></p>
+                            <p><?=$hrac[0]->Points?></p>
                         </div>
                         <div class="col-sm-6 card-text ">
                             <strong>Rebounds</strong>
-                            <p><?=$hrac[0]->Doskoky?></p>
+                            <p><?=$hrac[0]->Rebounds?></p>
                         </div>
                         <div class="col-sm-6 card-text ">
                             <strong>Assists</strong>
-                            <p><?=$hrac[0]->Asistencie?></p>
+                            <p><?=$hrac[0]->Assists?></p>
                         </div>
-                        <div class=" col-sm-6 card-text ">
+                        <div class="col-sm-6 card-text ">
                             <strong>Steals</strong>
-                            <p><?=$hrac[0]->Zisky?></p>
+                            <p><?=$hrac[0]->Steals?></p>
                         </div>
-                        <div class=" col-sm-6 card-text ">
+                        <div class="col-sm-6 card-text ">
                             <strong>Blocks</strong>
-                            <p><?=$hrac[0]->Bloky?></p>
+                            <p><?=$hrac[0]->Blocks?></p>
                         </div>
-                        <div class=" col-sm-6 card-text ">
-                            <strong>Turnovers</strong>
-                            <p><?=$hrac[0]->Straty?></p>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -113,13 +108,10 @@ if(sizeof($hrac) > 0) {
     let kg = vaha/x;
 
     let y =2022;
-    let hrac = <?=$hrac[0]->Narodenie?>;
+    let hrac = <?=$hrac[0]->Age?>;
     let vek = y-hrac;
 
-    function zvacsi(x) {
-        x.style.height = "80%";
-        x.style.width = "100%";
-    }
+
     document.getElementById("vaha").innerHTML =<?=$hrac[0]->Weight?>;
     document.getElementById("vahaKG").innerHTML =Math.round(kg);
     document.getElementById("vyska").innerHTML =<?=$hrac[0]->Height?>;

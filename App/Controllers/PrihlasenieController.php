@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 use App\Core\DB\Connection;
-use App\Models\Login;
+use App\Models\login;
 use App\Prihlasenie;
 
 
@@ -26,11 +26,13 @@ class PrihlasenieController extends AControllerRedirect
 
     }
     public function login() {
+
         $login = $this->request()->getValue('login');
         $password = $this->request()->getValue('password');
-        $uzivatel = Login::getAll('Meno = ?', [$login]);
+        $hash =password_hash($password,PASSWORD_DEFAULT);
+        $uzivatel = login::getAll('Username = ?', [$login]);
         if(sizeof($uzivatel) > 0 ) {
-            if ($uzivatel[0]->Heslo == $password) {
+            if (password_verify($password,$hash)) {
                 Prihlasenie::login($login,$password);
                 $this->redirect('home');
             } else {
@@ -47,15 +49,16 @@ class PrihlasenieController extends AControllerRedirect
     }
     public function registration()
     {
+        $email = $this->request()->getValue('email');
         $username = $this->request()->getValue('username');
         $password = $this->request()->getValue('password');
-        $uzivatel = Login::getAll('Meno = ?', [$username]);
+        $uzivatel = login::getAll('Email = ?', [$email]);
         if(sizeof($uzivatel) > 0 ) {
             $this->redirect('Prihlasenie','register',['error' => 'Zadane meno uz existuje']);
         }
-            $prepare = Connection::connect()->prepare('INSERT into login (Meno,Heslo) values(?,?);');
-            $this->Heslo =password_hash($password,PASSWORD_DEFAULT);
-            $prepare->execute([$username,$password]);
+            $prepare = Connection::connect()->prepare('INSERT into login (Email,Username,Password) values(?,?,?);');
+            $hash =password_hash($password,PASSWORD_DEFAULT);
+            $prepare->execute([$email,$username,$hash]);
             Prihlasenie::login($username,$password);
             $this->redirect('home');
     }
@@ -68,18 +71,17 @@ class PrihlasenieController extends AControllerRedirect
         return $this->html();
     }
     public function zmenaHeslaa() {
-        $heslo =$this->request()->getValue('heslo');
-        $uzivatel = Login::getAll('Heslo = ?', [$heslo]);
+       $heslo =$this->request()->getValue('heslo');
+        $uzivatel = login::getAll('Password = ?', [$heslo]);
         if(sizeof($uzivatel) > 0) {
-            if ($uzivatel[0]->Heslo == $heslo) {
                 $new = $this->request()->getValue('new');
                 $repeat = $this->request()->getValue('repeat');
                 if($new == $repeat) {
-                    $prepare = Connection::connect()->prepare('UPDATE login SET Heslo = ? WHERE Heslo = ?;');
+                    $prepare = Connection::connect()->prepare('UPDATE login SET Password = ? WHERE Password = ?;');
                     $prepare->execute([$new,$heslo]);
                     $this->redirect('home');
                 }
-            }
+
         }
 
     }

@@ -1,6 +1,6 @@
 <div class = "row">
     <div class = "col">
-        <form method ="post" enctype="multipart/form-data" action ="?c=home&a=updatee">
+        <form method ="post" enctype="multipart/form-data" action ="?c=Team&a=updatee">
             <div>
                 <div class = "mb-3">
                     <label for = "formFile" class = "form-label">Team</label>

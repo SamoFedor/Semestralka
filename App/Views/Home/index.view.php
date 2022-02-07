@@ -8,7 +8,7 @@
                         <img onclick="funLebron()" onmouseover="zvacsi(this)" onmouseout="normal(this)" class = "hraci"  alt = "Logo" src = "https://th.bing.com/th/id/OIP.YVKSTFfAkZGB30ufzC_12wHaE7?pid=ImgDet&rs=1">
                     </div>
                     <div class = "col-sm-3">
-                        <img onclick="funCurry()" onmouseover="zvacsi(this)" onmouseout="normal(this)" class = "hraci" alt = "Logo" src = "https://celebritynewsy.com/wp-content/uploads/2022/01/Warriors-Owner-Wants-Steph-Curry-to-Emulate-Tom-Brady.jpg">
+                       <img onclick="funCurry()" onmouseover="zvacsi(this)" onmouseout="normal(this)" class = "hraci" alt = "Logo" src = "https://celebritynewsy.com/wp-content/uploads/2022/01/Warriors-Owner-Wants-Steph-Curry-to-Emulate-Tom-Brady.jpg">
                     </div>
                     <div class = "col-sm-3">
                         <img  onclick="funGiannis()" onmouseover="zvacsi(this)" onmouseout="normal(this)" class = "hraci" alt = "Logo" src = "https://sportcycles.gr/wp-content/uploads/2020/09/GIANNIS02012-800x445.jpg">
@@ -40,7 +40,6 @@
                                 Robertson looks back at '68 benefit game in honor of MLK
                             </a>
                         </div>
-
                     </div>
                     <div class = "col-sm-6">
                         <div class = "News">
@@ -52,12 +51,9 @@
                             <p id ='Harden'>James Edward Harden Jr. (born August 26, 1989) is an American professional basketball player for the Brooklyn Nets of the National Basketball Association (NBA). He is one of the NBA's most prolific scorers and has been called the best shooting guard in the NBA,[1][2] as well as one of the top overall players in the league.[3] He played college basketball for the Arizona State Sun Devils, where he was named a consensus All-American and Pac-10 Player of the Year in 2009. Harden was selected with the third overall pick in the 2009 NBA draft by the Oklahoma City Thunder. In 2012, he was named NBA Sixth Man of the Year with the Thunder and helped the team reach the NBA Finals, where they lost to the Miami Heat in five games.</p>
                             <p id = 'Giannis'>Giannis Sina Ugo Antetokounmpo (born Adetokunbo December 6, 1994)[2] is a Greek professional basketball player for the Milwaukee Bucks of the National Basketball Association (NBA). Antetokounmpo's nationality, in addition to his size, speed and ball-handling skills have earned him the nickname "Greek Freak".</p>
                             <a href = "https://official.nba.com/nba-board-of-governors-approves-instant-replay-rule-changes/" class = "headlines"> Read more.</a>
-
-
                         </div>
                     </div>
                     <div class = "col-sm-2">
-                        <div class = "Headlines">
                             <p class ="Nadpisy" id ='MLI'></p>
                             <hr>
                             <a href = "https://gleague.nba.com/" class = "headlines" >
@@ -81,7 +77,6 @@
                             </a>
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
             <div class = "container-fluid footer">
@@ -101,14 +96,6 @@
                     document.getElementById("About").innerHTML ="About Player You clicked on";
                     document.getElementById("Headlines").innerHTML ="Headlines";
 
-                    function zvacsi(x) {
-                        x.style.height = "80%";
-                        x.style.width = "100%";
-                    }
-                    function normal(x) {
-                        x.style.height = "60%";
-                        x.style.width = "100%";
-                    }
 
                     function funCurry() {
                         document.getElementById("textt").style.display = "none";
