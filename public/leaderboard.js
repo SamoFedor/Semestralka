@@ -8,8 +8,10 @@ class Leaderboard {
             .then(data =>{
                 let html ="";
                 for(let team of data) {
-                    html += "<div class='card ajax ' >" +
-                        "" + team.Team  +"</div>" + "<div class='card ajax ' >" + team.Wins + " : "+ team.Loses +"</div>";
+                    html += "<div class = 'row'>" +
+                        "<div class = col-sm-3>"+"<div class='card ajax ' >" + "" + team.Team  +"</div>"+"</div>" +
+                        "<div class = col-sm-2>"+ "<div class='card ajax ' >" + team.Wins + " : "+ team.Loses + "</div>"+"</div>"+
+                        "</div>";
                 }
                 document.getElementById('team').innerHTML = html;
             });

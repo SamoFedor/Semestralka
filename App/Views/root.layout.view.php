@@ -40,7 +40,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?c=Coach&a=updatee"">Update coach</a>
+                        <a class="nav-link" href="?c=Coach&a=updatee">Update coach</a>
                     </li>
                 <?php if (\App\Prihlasenie::isLogged()) {?>
                         <li>
